@@ -1,6 +1,6 @@
 [package]
-name = "rust_algo"
-version = "0.1.0"
+name = "ram"
+version = "0.0.1"
 authors = ["Jake Schurch <jschurch@bryant.edu>"]
 license = "GPLv3"
 

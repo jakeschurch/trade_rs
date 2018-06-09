@@ -1,0 +1,10 @@
+[package]
+name = "rust_algo"
+version = "0.1.0"
+authors = ["Jake Schurch <jschurch@bryant.edu>"]
+license = "GPLv3"
+
+[workspace]
+members = [
+    "src/instrument"
+]

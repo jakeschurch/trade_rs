@@ -1,27 +1,49 @@
 use chrono::{DateTime, Utc};
 use instruments::currency::Currency;
+use std::fmt;
 
 #[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Clone)]
+// REVIEW: add volume_filled field?
 pub struct Order {
     // REVIEW: id field?
     pub symbol: String,
     pub price: Currency,
-    pub qty: u32,
+    pub volume: u32,
     pub side: Side,
     pub datetime: DateTime<Utc>,
-    state: State,
+    pub state: State,
 }
 
 impl Order {
-    pub fn new(symbol: String, price: f32, qty: u32, side: Side, datetime: DateTime<Utc>) -> Self {
+    pub fn new(
+        symbol: String,
+        price: f32,
+        volume: u32,
+        side: Side,
+        datetime: DateTime<Utc>,
+    ) -> Self {
         Order {
             symbol,
             price: Currency::from(price),
-            qty,
+            volume,
             side,
             datetime,
             state: State::New,
         }
+    }
+}
+
+impl fmt::Display for Order {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(
+            f,
+            "Symbol:\t{}
+            Price:\t{}
+            Volume:\t{}
+            Type of Order:\t{}
+            Date:\t{}",
+            self.symbol, self.price, self.volume, self.side, self.datetime
+        )
     }
 }
 
@@ -43,6 +65,16 @@ pub enum State {
 pub enum Side {
     Buy,
     Sell,
+}
+
+impl fmt::Display for Side {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        use self::Side::*;
+        match &self {
+            Buy => write!(f, "Buy"),
+            Sell => write!(f, "Sell"),
+        }
+    }
 }
 
 #[allow(dead_code)]

@@ -3,7 +3,7 @@ use std::fmt;
 use std::ops::Div;
 
 /// Currency is a struct used to represent monetary value, such as a price.
-#[derive(Debug, PartialEq, Eq, Clone)]
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub struct Currency(pub i64);
 
 impl From<usize> for Currency {

@@ -16,7 +16,7 @@ fn bench_quote_new(c: &mut Criterion) {
     use trade_rs::instruments::{Order, Side};
 
     c.bench_function("Quote::new", |b| {
-        b.iter(|| Order::new("aapl", 10.00, 10, Side::Buy, Utc::now()))
+        b.iter(|| Order::new("aapl".to_string(), 10.00, 10, Side::Buy, Utc::now()))
     });
 }
 

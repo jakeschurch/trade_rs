@@ -4,8 +4,8 @@ use TransactionError;
 
 use instruments::{Holding, Instrument, Order};
 
-#[derive(Debug, PartialEq, Eq)]
 // REVIEW: should Listing assets be generic to Instrument trait?
+#[derive(Debug, PartialEq, Eq)]
 /// Listing is a struct for a collection of holdings.
 struct Listing<'l> {
     symbol: &'l str,

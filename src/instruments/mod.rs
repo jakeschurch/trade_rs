@@ -26,14 +26,7 @@ pub struct Holding {
 
 impl Holding {
     pub fn new(order: Order) -> Holding {
-        Holding {
-            symbol: order.symbol.to_string(),
-            volume: order.volume,
-            buy_price: order.price,
-            buy_date: order.datetime,
-            sell_price: None,
-            sell_date: None,
-        }
+        Holding::from(order)
     }
 }
 impl Instrument for Holding {

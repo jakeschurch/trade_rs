@@ -13,10 +13,10 @@ fn bench_currency_from(c: &mut Criterion) {
 
 fn bench_quote_new(c: &mut Criterion) {
     use chrono::Utc;
-    use trade_rs::instruments::{Order, Side};
+    use trade_rs::instruments::{Order, OrderSide};
 
     c.bench_function("Quote::new", |b| {
-        b.iter(|| Order::new("aapl".to_string(), 10.00, 10, Side::Buy, Utc::now()))
+        b.iter(|| Order::new("aapl".to_string(), 10.00, 10, OrderSide::Buy, Utc::now()))
     });
 }
 

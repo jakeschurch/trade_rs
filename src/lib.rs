@@ -1,15 +1,23 @@
 #![allow(dead_code)]
 extern crate chrono;
 extern crate num;
+extern crate twox_hash;
 #[cfg(test)]
 #[macro_use]
 extern crate lazy_static;
 
+use instruments::{Holding, Order, Quote};
 use std::fmt::{Debug, Display};
 use std::{error, fmt};
 
 mod collections;
 pub mod instruments;
+mod pipeline;
+
+pub trait Algorithm {
+    fn meets_buy_criteria(self, quote: Quote) -> Option<Order>;
+    fn meets_sell_criteria(self, holding: &Holding, quote: Quote) -> Option<Order>;
+}
 
 #[derive(Debug, Clone)]
 struct TransactionError<T: Debug + Display> {

@@ -10,6 +10,7 @@ pub struct Order {
     pub price: Currency,
     pub volume: u32,
     pub side: Side,
+    pub status: Status,
     pub datetime: DateTime<Utc>,
     pub state: State,
 }
@@ -28,6 +29,7 @@ impl Order {
             volume,
             side,
             datetime,
+            status: Status::Open,
             state: State::New,
         }
     }
@@ -60,6 +62,12 @@ pub enum State {
     Rejected,
 }
 
+#[derive(Debug, PartialEq, Eq, Ord, PartialOrd, Clone)]
+pub enum Status {
+    Open = 0,
+    Closed = 1,
+}
+
 #[derive(PartialEq, Eq, Debug, Clone, PartialOrd, Ord)]
 /// Side indicates an order's intention to either buy or sell shares.  
 pub enum Side {
@@ -79,8 +87,18 @@ impl fmt::Display for Side {
 
 #[allow(dead_code)]
 #[derive(PartialEq, Eq, Debug, Clone, PartialOrd, Ord)]
-/// Logic indicates an order's execution logic.
-/// NOTE(Logic): Currently only allowing market logic orders.
-pub enum Logic {
+/// ExecutionStyle indicates an order's execution logic.
+/// NOTE(ExecutionStyle): Currently only allowing market logic orders.
+pub enum ExecutionStyle {
     Market,
+    Stop {
+        stop_price: Currency,
+    },
+    Limit {
+        limit_price: Currency,
+    },
+    StopLimit {
+        stop_price: Currency,
+        limit_price: Currency,
+    },
 }

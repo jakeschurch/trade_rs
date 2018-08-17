@@ -1,5 +1,5 @@
 pub use self::currency::Currency;
-pub use self::order::{Order, Side, State};
+pub use self::order::{Order, Side as OrderSide, State as OrderState, Status as OrderStatus};
 
 mod currency;
 mod order;
@@ -67,6 +67,14 @@ pub struct Quote {
     pub datetime: DateTime<Utc>,
 }
 
+impl Quote {
+    pub fn update(&mut self, other: Quote) {
+        self.volume = other.volume;
+        self.price = other.price;
+        self.datetime = other.datetime;
+    }
+}
+
 impl From<Order> for Quote {
     fn from(order: Order) -> Self {
         Quote {
@@ -89,7 +97,7 @@ mod tests {
             String::from("AAPL"),
             10.50,
             10,
-            Side::Buy,
+            OrderSide::Buy,
             Utc.ymd(2018, 1, 20).and_hms(10, 0, 0),
         );
     }

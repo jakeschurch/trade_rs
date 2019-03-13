@@ -8,8 +8,16 @@
 ## Contributing
 Pull Requests & issues are welcome! I would love to see the repo evolve just beyond my individual contributions.
 
-## License 
-trade_rs is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
+## License
+
+trade_rs is licensed under either of
+
+ * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or
+   http://www.apache.org/licenses/LICENSE-2.0)
+ * MIT license ([LICENSE-MIT](LICENSE-MIT) or
+   http://opensource.org/licenses/MIT)
+
+at your option.
 
 ## Community
 Discord - Server Invite Link:[https://discord.gg/ySx6m5W](https://discord.gg/ySx6m5W)

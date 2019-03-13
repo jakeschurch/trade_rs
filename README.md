@@ -10,3 +10,6 @@ Pull Requests & issues are welcome! I would love to see the repo evolve just bey
 
 ## License 
 trade_rs is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
+
+## Community
+Discord - Server Invite Link:[https://discord.gg/ySx6m5W](https://discord.gg/ySx6m5W)

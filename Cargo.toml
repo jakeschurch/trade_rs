@@ -1,10 +1,12 @@
 [package]
-name = "ram"
+name = "trade-rs"
+description = "Library for financial-trading-related assets."
 version = "0.0.1"
-authors = ["Jake Schurch <jschurch@bryant.edu>"]
-license = "GPLv3"
+authors = ["Jake Schurch <jakeschurch@gmail.com"]
+license = "MIT/APACHE-2.0"
 
-[workspace]
-members = [
-    "src/instrument"
-]
+repository = "https://github.com/jakeschurch/trade_rs"
+
+[badges]
+travis-ci = { repository = "jakeschurch/trade_rs" }
+maintenance = { status = "actively-developed" }

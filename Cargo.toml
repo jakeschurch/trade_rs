@@ -2,8 +2,8 @@
 name = "trade-rs"
 description = "Library for financial-trading-related assets."
 version = "0.0.1"
-authors = ["Jake Schurch <jakeschurch@gmail.com"]
-license = "MIT/APACHE-2.0"
+authors = ["Jake Schurch <jakeschurch@gmail.com", "Jon Plotner"]
+license = "MIT OR Apache-2.0"
 
 repository = "https://github.com/jakeschurch/trade_rs"
 

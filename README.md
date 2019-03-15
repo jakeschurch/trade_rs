@@ -6,7 +6,7 @@
 [trade_rs](https://github.com/jakeschurch/trade_rs) is a open-source rust library targeted for algorithmic trading & financial use cases.
 
 ## Contributing
-Pull Requests & issues are welcome! I would love to see the repo evolve just beyond my individual contributions.
+Pull Requests & issues are welcome!
 
 ## License
 
@@ -20,4 +20,4 @@ trade_rs is licensed under either of
 at your option.
 
 ## Community
-Discord - Server Invite Link:[https://discord.gg/ySx6m5W](https://discord.gg/ySx6m5W)
+Discord - Server Invite Link: [https://discord.gg/ySx6m5W](https://discord.gg/ySx6m5W)

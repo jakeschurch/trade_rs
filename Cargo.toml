@@ -2,23 +2,11 @@
 name = "trade-rs"
 description = "Library for financial-trading-related assets."
 version = "0.0.1"
-authors = ["Jake Schurch <jakeschurch@gmail.com"]
-license = "GPL-3.0"
+authors = ["Jake Schurch <jakeschurch@gmail.com", "Jon Plotner"]
+license = "MIT OR Apache-2.0"
 
 repository = "https://github.com/jakeschurch/trade_rs"
 
 [badges]
 travis-ci = { repository = "jakeschurch/trade_rs" }
 maintenance = { status = "actively-developed" }
-
-[dependencies]
-chrono = { version = "0.4", features = ["serde"] }
-num = "0.2.0"
-
-[dev-dependencies]
-lazy_static = "1.0.2"
-criterion = "0.2"
-
-[[bench]]
-name = "b_instruments"
-harness = false

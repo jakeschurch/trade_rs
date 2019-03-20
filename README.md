@@ -20,4 +20,4 @@ trade_rs is licensed under either of
 at your option.
 
 ## Community
-Slack - [traders-zff2707.slack.com](https://traders-zff2707.slack.com/)
+Slack - [Shared Slack Invite](https://join.slack.com/t/trade-rs/shared_invite/enQtNTc0NDcwMTExNDczLWZmODRiMjJmZmViOGUwZjc2MWUwM2JiNGFlM2I5OWVkZjdlOTI3ODQxNDBlODg1ZjM4YzI3NzhhNGVkNjM1ZjI)

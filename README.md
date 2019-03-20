@@ -20,4 +20,4 @@ trade_rs is licensed under either of
 at your option.
 
 ## Community
-Discord - Server Invite Link: [https://discord.gg/ySx6m5W](https://discord.gg/ySx6m5W)
+Slack - [traders-zff2707.slack.com](https://traders-zff2707.slack.com/)

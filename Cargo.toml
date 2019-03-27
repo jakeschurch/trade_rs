@@ -4,9 +4,13 @@ description = "Library for financial-trading-related assets."
 version = "0.0.1"
 authors = ["Jake Schurch <jakeschurch@gmail.com", "Jon Plotner"]
 license = "MIT OR Apache-2.0"
+edition = "2018"
 
 repository = "https://github.com/jakeschurch/trade_rs"
 
 [badges]
 travis-ci = { repository = "jakeschurch/trade_rs" }
 maintenance = { status = "actively-developed" }
+
+[dependencies]
+chrono = "0.4.6"

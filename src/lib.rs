@@ -1,3 +1,7 @@
+#![allow(clippy::all)]
+
+pub mod order;
+
 #[cfg(test)]
 mod tests {
     #[test]

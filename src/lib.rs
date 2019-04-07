@@ -1,4 +1,5 @@
 #![allow(clippy::all)]
+use actix::prelude::*;
 
 pub mod order;
 
